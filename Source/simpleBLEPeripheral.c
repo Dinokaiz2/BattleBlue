@@ -99,7 +99,7 @@
  */
 
 // How often to perform periodic event
-#define SBP_PERIODIC_EVT_PERIOD                   50
+#define SBP_PERIODIC_EVT_PERIOD                   1
 
 // What is the advertising interval when device is discoverable (units of 625us, 160=100ms)
 #define DEFAULT_ADVERTISING_INTERVAL          160
@@ -364,6 +364,83 @@ static void setUpInterrupts() {
     T3CTL_CLR | T3CTL_MODE_UPDOWN;
 }
 
+#define PWM_PERIOD 0x0FFF // in clock edges
+#define T1CTL_CLKDIV1 (0x00 << 2) // Timer 1 prescaler divider set to 1
+#define T1CTL_CLKDIV8 (0x01 << 2) // Timer 1 prescaler divider set to 8
+#define T1CTL_MODE_OFF 0x00 // Timer 1 doesn't run
+#define T1CTL_MODE_FR  0x01 // Timer 1 in free-running mode
+#define T1CTL_MODE_MOD 0x02 // Timer 1 in modulo mode
+#define T1CCTLn_CMP_LE_ALIGN (0x04 << 3) // Set timer 1 channel n to set low on compare, high on 0 for leading-edge aligned PWM
+#define T1CCTLn_MODE_CMP (0x01 << 2) // Set timer 1 channel n to compare mode instead of capture
+static void pwmInit()
+{
+  // We will use Timer 1 Channel 0, 1 & 2 for timings
+  // Ch1 for P0_3
+  // Ch2 for P0_4
+  // Ch3 for P0_5
+  // Ch4 for P0_6
+  
+  // Configure IO's
+  P0DIR |= (1<<3) | (1<<4) | (1<<5) | (1<<6);  // 0x1C; //0x18;              // Data direction OUT for the PWM pins
+  P0SEL |= (1<<3) | (1<<4) | (1<<5) | (1<<6);  //0x18;               // Choose peripheral mode for PWM pins
+  PERCFG |= 0x03;              // Move USART1&2 to alternate2 location so that T1 is visible
+  P0 &= ~( (1<<3) | (1<<4) | (1<<5) | (1<<6) ); // Set LOW for GPIO functionality
+  
+  // Initialize Timer 1
+  T1CTL = T1CTL_CLKDIV1 | T1CTL_MODE_OFF; // Set timer 1 to no prescaler divider and off
+
+  // Set timer 1 channels 1-4 to compare mode and leading-edge aligned (high at 0) TODO: can we uncomment 1st line and get 5 pwm channels?
+  //T1CCTL0 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
+  T1CCTL1 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
+  T1CCTL2 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
+  T1CCTL3 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
+  T1CCTL4 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
+  
+  // Sets T1CC0 (count to wrap to 0 at) to 0x0FFF = 4095
+  T1CC0L = PWM_PERIOD & 0xFF; // PWM Period
+  T1CC0H = PWM_PERIOD >> 8;
+  
+  // Reset timer to 0
+  T1CNTH = 0;
+  T1CNTL = 0;
+
+  // TODO why is this commented
+//    IEN1 |= 0x02;               // Enable T1 cpu interrupt
+  
+  // Set value for each channel to go LOW at. PWM duty cycle % = T1CCn / T1CC0.
+  T1CC1L = 0x77;
+  T1CC1H = 0x01;              // Ticks = 375 (1,5ms initial duty cycle)
+  T1CC2L = 0x77;
+  T1CC2H = 0x01;              // Ticks = 375 (1,5ms initial duty cycle)
+  T1CC3L = 0x77;
+  T1CC3H = 0x01;              // Ticks = 375 (1,5ms initial duty cycle)
+  T1CC4L = 0x77;
+  T1CC4H = 0x01;              // Ticks = 375 (1,5ms initial duty cycle)
+}
+
+static void pwmStart()
+{
+  T1CTL |= T1CTL_MODE_MOD; // Switch timer 1 to modulo mode.
+}
+
+static void pwmStop()
+{
+  T1CTL |= T1CTL_MODE_OFF; // Switch timer 1 to modulo mode.
+}
+
+long i = 0;
+static void pwmUpdate() {
+  T1CC1L = (i % PWM_PERIOD) & 0xFF;
+  T1CC1H = (i % PWM_PERIOD) >> 8;
+  T1CC2L = ((i % PWM_PERIOD) - 1000) & 0xFF;
+  T1CC2H = ((i % PWM_PERIOD) - 1000) >> 8;
+  T1CC3L = ((i % PWM_PERIOD) - 2000) & 0xFF;
+  T1CC3H = ((i % PWM_PERIOD) - 2000) >> 8;
+  T1CC4L = ((i % PWM_PERIOD) - 3000) & 0xFF;
+  T1CC4H = ((i % PWM_PERIOD) - 3000) >> 8;
+  i+=8;
+}
+
 /*********************************************************************
  * PROFILE CALLBACKS
  */
@@ -412,8 +489,9 @@ void SimpleBLEPeripheral_Init( uint8 task_id )
   // Setup the GAP
   VOID GAP_SetParamValue( TGAP_CONN_PAUSE_PERIPHERAL, DEFAULT_CONN_PAUSE_PERIPHERAL );
   
-  // Setup interrupts for PWM
-  setUpInterrupts();
+  // Set up and start PWM
+  pwmInit();
+  pwmStart();
   
   // Setup the GAP Peripheral Role Profile
   {
@@ -620,7 +698,8 @@ uint16 SimpleBLEPeripheral_ProcessEvent( uint8 task_id, uint16 events )
     }
 
     // Perform periodic application task
-    performPeriodicTask();
+    //performPeriodicTask();
+    pwmUpdate();
 
     return (events ^ SBP_PERIODIC_EVT);
   }

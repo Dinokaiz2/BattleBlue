@@ -1,0 +1,13 @@
+cc2541 user guide: http://www.ti.com/lit/ug/swru191f/swru191f.pdf
+
+Section 9
+T1CC0: made up of 2 bytes, T1CC0L and T1CC0H. Timer 1 counts up and once it reaches this number (maximum 0xFFFF=65535) it will wrap back to 0. Lower T1CC0 = lower interrupt period = faster interrupts = higher frequency PWM.
+	note: there also exists an up-down mode instead of a modulo mode to make it count back down instead of wrapping
+T1CNT: Made of T1CNTH and T1CNTL. Holds the count for timer 1 that increments every ???? and wraps based on T1CC0.
+Clock edge for interrupt frequency: CLKCONCMD.TICKSPD, can be set between 0.25 MHz and 32 MHz
+T1CTL: 2 high bits hold the prescaler divider (divides timer 1 clock edge frequency). 2 low bits hold the mode (modulo, up-down, free-running, stopped).
+T1CTL.DIV divides above frequency by 1 , 8, 32, or 128
+Write 00 to T1CTL.MODE to stop counter. Write anything else to start it
+Timer 1 compare pins: Ch0-4: P0_2, P0_3, P0_4, P0_5, P0_6
+	Alt 2 Ch0-4: P1_2, P1_1, P1_0, P0_7, P0 
+T1CCTLn (n can be 0-4): For each of the 0-4 channels of timer 1. Low 3 bits (T1CCTL.CMP) set "compare mode", or behaviour when count = 0 or = compare value. 
