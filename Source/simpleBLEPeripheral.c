@@ -50,8 +50,6 @@
  * INCLUDES
  */
 
-#include <stdio.h> //TODO
-
 #include "bcomdef.h"
 #include "OSAL.h"
 #include "OSAL_PwrMgr.h"
@@ -99,7 +97,7 @@
  */
 
 // How often to perform periodic event
-#define SBP_PERIODIC_EVT_PERIOD                   1
+#define SBP_PERIODIC_EVT_PERIOD                   10
 
 // What is the advertising interval when device is discoverable (units of 625us, 160=100ms)
 #define DEFAULT_ADVERTISING_INTERVAL          160
@@ -312,12 +310,10 @@ static void setUpInterrupts() {
     
     // Selects P1_1 & P0_1 as peripheral I/O.
     P1SEL |= P1SEL_SELP1_1;
-    P1SEL |= P1SEL_SELP1_4;
     //  Timer 4 has priotity over Timer 1. 
     P2SEL |= P2SEL_PRI1P1;
     // Select Timer 4 pin location as alternative 1
     PERCFG &= ~PERCFG_T4CFG;
-    PERCFG &= ~PERCFG_T3CFG;
   
     /***************************************************************************
      * Setup interrupt
@@ -364,81 +360,124 @@ static void setUpInterrupts() {
     T3CTL_CLR | T3CTL_MODE_UPDOWN;
 }
 
-#define PWM_PERIOD 0x0FFF // in clock edges
+#define PWM_PERIOD 0x9C40 // in clock edges (gives 50Hz with global clock at 2MHz)
 #define T1CTL_CLKDIV1 (0x00 << 2) // Timer 1 prescaler divider set to 1
 #define T1CTL_CLKDIV8 (0x01 << 2) // Timer 1 prescaler divider set to 8
+#define T34CTL_CLKDIV1 (0x00 << 5) // Timer 3 prescaler divider set to 1
+#define T34CTL_CLKDIV2 (0x01 << 5) // Timer 3 prescaler divider set to 2
 #define T1CTL_MODE_OFF 0x00 // Timer 1 doesn't run
 #define T1CTL_MODE_FR  0x01 // Timer 1 in free-running mode
-#define T1CTL_MODE_MOD 0x02 // Timer 1 in modulo mode
-#define T1CCTLn_CMP_LE_ALIGN (0x04 << 3) // Set timer 1 channel n to set low on compare, high on 0 for leading-edge aligned PWM
-#define T1CCTLn_MODE_CMP (0x01 << 2) // Set timer 1 channel n to compare mode instead of capture
+#define T34CTL_MODE_FR  0x00 // Timer 3 or 4 in free-running mode
+#define T34CTL_MODE_DOWN  0x01 // Timer 3 or 4 in down mode
+#define TxCTL_MODE_MOD 0x02 // Timer x in modulo mode
+#define TxCCTLn_CMP_LE_ALIGN (0x04 << 3) // Set timer x channel n to set low on compare, high on 0 for leading-edge aligned PWM
+#define TxCCTLn_MODE_CMP (0x01 << 2) // Set timer x channel n to compare mode instead of capture
+#define T34CTL_START_0 (0x00 << 4) // Stop timer 3 or 4
+#define T34CTL_START_1 (0x01 << 4) // Start timer 3 or 4
 static void pwmInit()
 {
-  // We will use Timer 1 Channel 0, 1 & 2 for timings
-  // Ch1 for P0_3
-  // Ch2 for P0_4
-  // Ch3 for P0_5
-  // Ch4 for P0_6
+  // Timer 1 ch1(P0_3), ch2(P0_4), ch3(P0_5), ch4(P0_6)
+  // Timer 3 ch0(P1_3), ch1(P1_4)
+  // Timer 4 ch0(P1_0), ch1(P1_1)
   
-  // Configure IO's
-  P0DIR |= (1<<3) | (1<<4) | (1<<5) | (1<<6);  // 0x1C; //0x18;              // Data direction OUT for the PWM pins
-  P0SEL |= (1<<3) | (1<<4) | (1<<5) | (1<<6);  //0x18;               // Choose peripheral mode for PWM pins
-  PERCFG |= 0x03;              // Move USART1&2 to alternate2 location so that T1 is visible
+  // for periodic checking
+  P0DIR |= (1<<0); // output
+  P0SEL &= ~(1<<0); // manual control
+  P0 &= ~(1<<0); // output off
+  
+  // Set global timer tick frequency to 2 MHz
+  CLKCONCMD = (CLKCONCMD & ~CLKCON_TICKSPD) | CLKCON_TICKSPD_2M;
+  
+  // Configure IO for timer 1
+  P0DIR |= (1<<3) | (1<<4) | (1<<5) | (1<<6);   // Set P0_3, P0_4, P0_5, P0_6 to output
+  P0SEL |= (1<<3) | (1<<4) | (1<<5) | (1<<6);   // Give timer 1 control of P0_3, P0_4, P0_5, P0_6
+  PERCFG |= 0x03;                               // Move USART1&2 to alternate2 location so that timer 1 pins are visible
   P0 &= ~( (1<<3) | (1<<4) | (1<<5) | (1<<6) ); // Set LOW for GPIO functionality
   
-  // Initialize Timer 1
+  // Configure IO for timer 3
+  P1DIR |= (1<<3) | (1<<4); // Set P1_3, P1_4 to output
+  P1SEL |= (1<<3) | (1<<4); // Give timer 3 control of P1_3, P1_4
+  P2SEL |= (1<<6) | (1<<5); // Give timer 3 priority over USART 1 & 2
+  P1 &=  ~((1<<3) | (1<<4)); // Set LOW for GPIO functionality
+  
+  // Configure IO for timer 4
+  P1DIR |= (1<<0) | (1<<1); // Set P1_0, P1_1 to output
+  P1SEL |= (1<<0) | (1<<1); // Give timer 4 control of P1_0, P1_1
+  P2SEL |= (1<<4); // Give timer 4 priority over timer 1
+  P1 &=  ~((1<<0) | (1<<1)); // Set LOW for GPIO functionality
+  
+  // Initialize timers 1, 3, and 4
   T1CTL = T1CTL_CLKDIV1 | T1CTL_MODE_OFF; // Set timer 1 to no prescaler divider and off
+  T3CTL = T34CTL_CLKDIV1 | T34CTL_START_0 | T34CTL_MODE_FR; // Set timer 3 to no prescaler divider, stop the timer, and set it to free-running mode
+  T4CTL = T34CTL_CLKDIV1 | T34CTL_START_0 | T34CTL_MODE_FR; // Set timer 4 to no prescaler divider, stop the timer, and set it to free-running mode
 
-  // Set timer 1 channels 1-4 to compare mode and leading-edge aligned (high at 0) TODO: can we uncomment 1st line and get 5 pwm channels?
-  //T1CCTL0 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
-  T1CCTL1 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
-  T1CCTL2 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
-  T1CCTL3 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
-  T1CCTL4 = T1CCTLn_CMP_LE_ALIGN | T1CCTLn_MODE_CMP;
+  // Set timer 1 ch1-4 to compare mode and leading-edge aligned (high at 0) TODO: can we uncomment 1st line and get 5 pwm channels?
+  T1CCTL1 = TxCCTLn_CMP_LE_ALIGN | TxCCTLn_MODE_CMP;
+  T1CCTL2 = TxCCTLn_CMP_LE_ALIGN | TxCCTLn_MODE_CMP;
+  T1CCTL3 = TxCCTLn_CMP_LE_ALIGN | TxCCTLn_MODE_CMP;
+  T1CCTL4 = TxCCTLn_CMP_LE_ALIGN | TxCCTLn_MODE_CMP;
   
-  // Sets T1CC0 (count to wrap to 0 at) to 0x0FFF = 4095
-  T1CC0L = PWM_PERIOD & 0xFF; // PWM Period
+  // Set timer 3 ch0-1 and timer 4 ch0-1 to compare mode and leading-edge PWM
+  T3CCTL0 = TxCCTLn_CMP_LE_ALIGN | TxCCTLn_MODE_CMP;
+  T3CCTL1 = TxCCTLn_CMP_LE_ALIGN | TxCCTLn_MODE_CMP;
+  T4CCTL0 = TxCCTLn_CMP_LE_ALIGN | TxCCTLn_MODE_CMP;
+  T4CCTL1 = TxCCTLn_CMP_LE_ALIGN | TxCCTLn_MODE_CMP;
+  
+  // Sets T1CC0 (count to wrap timer 1 to 0 at) to 0x9C40 = 40000. Gives 50Hz.
+  T1CC0L = PWM_PERIOD & 0xFF;
   T1CC0H = PWM_PERIOD >> 8;
+
+  // Timers 3/4 wrap at 255. Gives 15.625 kHz.
   
-  // Reset timer to 0
+  // Reset timers 1, 3, and 4 to 0
   T1CNTH = 0;
   T1CNTL = 0;
+  T3CNT = 0;
+  T4CNT = 0;
 
-  // TODO why is this commented
-//    IEN1 |= 0x02;               // Enable T1 cpu interrupt
-  
   // Set value for each channel to go LOW at. PWM duty cycle % = T1CCn / T1CC0.
-  T1CC1L = 0x77;
-  T1CC1H = 0x01;              // Ticks = 375 (1,5ms initial duty cycle)
-  T1CC2L = 0x77;
-  T1CC2H = 0x01;              // Ticks = 375 (1,5ms initial duty cycle)
-  T1CC3L = 0x77;
-  T1CC3H = 0x01;              // Ticks = 375 (1,5ms initial duty cycle)
-  T1CC4L = 0x77;
-  T1CC4H = 0x01;              // Ticks = 375 (1,5ms initial duty cycle)
+  T1CC1L = 0x7C;
+  T1CC1H = 0x0A;              // Ticks = 2684 ( initial duty cycle)
+  T1CC2L = 0x7C;
+  T1CC2H = 0x0A;              // Ticks = 2684 ( initial duty cycle)
+  T1CC3L = 0x7C;
+  T1CC3H = 0x0A;              // Ticks = 2684 (initial duty cycle)
+  T1CC4L = 0x7C;
+  T1CC4H = 0x0A;              // Ticks = 2684 (initial duty cycle)
+  
+  // PWM duty cycle % = T34CCn / 255
+  T3CC0 = 0x17; // Set timer 3 to 23 ticks
+  T3CC1 = 0x17;
+  T4CC0 = 0x17; // Set timer 4 to 23 ticks
+  T4CC1 = 0x17;
 }
 
 static void pwmStart()
 {
-  T1CTL |= T1CTL_MODE_MOD; // Switch timer 1 to modulo mode.
+  T1CTL |= TxCTL_MODE_MOD; // Switch timer 1 to modulo mode
+  T3CTL |= T34CTL_START_1; // Start timer 3
+  T4CTL |= T34CTL_START_1; // Start timer 3
 }
 
 static void pwmStop()
 {
-  T1CTL |= T1CTL_MODE_OFF; // Switch timer 1 to modulo mode.
+  T1CTL |= T1CTL_MODE_OFF; // Switch timer 1 to off
+  T3CTL |= T34CTL_START_0; // Stop timer 3
+  T4CTL |= T34CTL_START_0; // Stop timer 3
 }
 
 long i = 0;
 static void pwmUpdate() {
-  T1CC1L = (i % PWM_PERIOD) & 0xFF;
-  T1CC1H = (i % PWM_PERIOD) >> 8;
-  T1CC2L = ((i % PWM_PERIOD) - 1000) & 0xFF;
-  T1CC2H = ((i % PWM_PERIOD) - 1000) >> 8;
-  T1CC3L = ((i % PWM_PERIOD) - 2000) & 0xFF;
-  T1CC3H = ((i % PWM_PERIOD) - 2000) >> 8;
-  T1CC4L = ((i % PWM_PERIOD) - 3000) & 0xFF;
-  T1CC4H = ((i % PWM_PERIOD) - 3000) >> 8;
-  i+=8;
+  //T1CC1L = (i % PWM_PERIOD) & 0xFF;
+  //T1CC1H = (i % PWM_PERIOD) >> 8;
+  //T1CC2L = ((i % PWM_PERIOD) - 1000) & 0xFF;
+  //T1CC2H = ((i % PWM_PERIOD) - 1000) >> 8;
+  //T1CC3L = ((i % PWM_PERIOD) - 2000) & 0xFF;
+  //T1CC3H = ((i % PWM_PERIOD) - 2000) >> 8;
+  //T1CC4L = ((i % PWM_PERIOD) - 3000) & 0xFF;
+  //T1CC4H = ((i % PWM_PERIOD) - 3000) >> 8;
+  //i+=128;
+  P0 ^= 1<<0;
 }
 
 /*********************************************************************

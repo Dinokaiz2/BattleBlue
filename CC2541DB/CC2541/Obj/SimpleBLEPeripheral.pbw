@@ -80406,237 +80406,13 @@
     "scope": null
   },
   {
-    "ID": "c:stdio.h@219@macro@_STDIO_INCLUDED",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STDIO_INCLUDED",
-    "location": {
-      "column": "9",
-      "line": "11",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "_STDIO_INCLUDED",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdio.h@347@macro@NULL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "NULL",
-    "location": {
-      "column": "11",
-      "line": "20",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "NULL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdio.h@404@macro@EOF",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "EOF",
-    "location": {
-      "column": "11",
-      "line": "24",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "EOF",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdio.h@466@macro@MEMORY_ATTRIBUTE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "MEMORY_ATTRIBUTE",
-    "location": {
-      "column": "11",
-      "line": "28",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "MEMORY_ATTRIBUTE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdio.h@537@macro@__PRINTFPR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__PRINTFPR",
-    "location": {
-      "column": "11",
-      "line": "32",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "__PRINTFPR",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdio.h@668@macro@__SCANFPR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__SCANFPR",
-    "location": {
-      "column": "11",
-      "line": "34",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "__SCANFPR",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@puts",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int puts(const char *)",
-    "location": {
-      "column": "47",
-      "line": "43",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "puts",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@putchar",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int putchar(int)",
-    "location": {
-      "column": "18",
-      "line": "45",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "putchar",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@getchar",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int getchar(void)",
-    "location": {
-      "column": "18",
-      "line": "46",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "getchar",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@sprintf",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int sprintf(char *, const char *, ...)",
-    "location": {
-      "column": "47",
-      "line": "51",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "sprintf",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vsprintf",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int vsprintf(char *, const char *, void **)",
-    "location": {
-      "column": "47",
-      "line": "52",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "vsprintf",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@printf",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int printf(const char *, ...)",
-    "location": {
-      "column": "47",
-      "line": "54",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "printf",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vprintf",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int vprintf(const char *, void **)",
-    "location": {
-      "column": "47",
-      "line": "55",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "vprintf",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@scanf",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int scanf(const char *, ...)",
-    "location": {
-      "column": "47",
-      "line": "56",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "scanf",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@sscanf",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int sscanf(const char *, const char *, ...)",
-    "location": {
-      "column": "47",
-      "line": "57",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "sscanf",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@gets",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * gets(char *)",
-    "location": {
-      "column": "48",
-      "line": "59",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdio.h"
-    },
-    "name": "gets",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:simpleBLEPeripheral.c@3570@macro@SBP_PERIODIC_EVT_PERIOD",
+    "ID": "c:simpleBLEPeripheral.c@3541@macro@SBP_PERIODIC_EVT_PERIOD",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SBP_PERIODIC_EVT_PERIOD",
     "location": {
       "column": "9",
-      "line": "102",
+      "line": "100",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "SBP_PERIODIC_EVT_PERIOD",
@@ -80644,13 +80420,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@3718@macro@DEFAULT_ADVERTISING_INTERVAL",
+    "ID": "c:simpleBLEPeripheral.c@3690@macro@DEFAULT_ADVERTISING_INTERVAL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFAULT_ADVERTISING_INTERVAL",
     "location": {
       "column": "9",
-      "line": "105",
+      "line": "103",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "DEFAULT_ADVERTISING_INTERVAL",
@@ -80658,13 +80434,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@4005@macro@DEFAULT_DISCOVERABLE_MODE",
+    "ID": "c:simpleBLEPeripheral.c@3977@macro@DEFAULT_DISCOVERABLE_MODE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFAULT_DISCOVERABLE_MODE",
     "location": {
       "column": "9",
-      "line": "113",
+      "line": "111",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "DEFAULT_DISCOVERABLE_MODE",
@@ -80672,13 +80448,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@4226@macro@DEFAULT_DESIRED_MIN_CONN_INTERVAL",
+    "ID": "c:simpleBLEPeripheral.c@4198@macro@DEFAULT_DESIRED_MIN_CONN_INTERVAL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFAULT_DESIRED_MIN_CONN_INTERVAL",
     "location": {
       "column": "9",
-      "line": "117",
+      "line": "115",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "DEFAULT_DESIRED_MIN_CONN_INTERVAL",
@@ -80686,13 +80462,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@4389@macro@DEFAULT_DESIRED_MAX_CONN_INTERVAL",
+    "ID": "c:simpleBLEPeripheral.c@4361@macro@DEFAULT_DESIRED_MAX_CONN_INTERVAL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFAULT_DESIRED_MAX_CONN_INTERVAL",
     "location": {
       "column": "9",
-      "line": "120",
+      "line": "118",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "DEFAULT_DESIRED_MAX_CONN_INTERVAL",
@@ -80700,13 +80476,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@4516@macro@DEFAULT_DESIRED_SLAVE_LATENCY",
+    "ID": "c:simpleBLEPeripheral.c@4488@macro@DEFAULT_DESIRED_SLAVE_LATENCY",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFAULT_DESIRED_SLAVE_LATENCY",
     "location": {
       "column": "9",
-      "line": "123",
+      "line": "121",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "DEFAULT_DESIRED_SLAVE_LATENCY",
@@ -80714,13 +80490,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@4672@macro@DEFAULT_DESIRED_CONN_TIMEOUT",
+    "ID": "c:simpleBLEPeripheral.c@4644@macro@DEFAULT_DESIRED_CONN_TIMEOUT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFAULT_DESIRED_CONN_TIMEOUT",
     "location": {
       "column": "9",
-      "line": "126",
+      "line": "124",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "DEFAULT_DESIRED_CONN_TIMEOUT",
@@ -80728,13 +80504,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@4811@macro@DEFAULT_ENABLE_UPDATE_REQUEST",
+    "ID": "c:simpleBLEPeripheral.c@4783@macro@DEFAULT_ENABLE_UPDATE_REQUEST",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFAULT_ENABLE_UPDATE_REQUEST",
     "location": {
       "column": "9",
-      "line": "129",
+      "line": "127",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "DEFAULT_ENABLE_UPDATE_REQUEST",
@@ -80742,13 +80518,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@4921@macro@DEFAULT_CONN_PAUSE_PERIPHERAL",
+    "ID": "c:simpleBLEPeripheral.c@4893@macro@DEFAULT_CONN_PAUSE_PERIPHERAL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEFAULT_CONN_PAUSE_PERIPHERAL",
     "location": {
       "column": "9",
-      "line": "132",
+      "line": "130",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "DEFAULT_CONN_PAUSE_PERIPHERAL",
@@ -80756,13 +80532,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@5024@macro@TI_COMPANY_ID",
+    "ID": "c:simpleBLEPeripheral.c@4996@macro@TI_COMPANY_ID",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TI_COMPANY_ID",
     "location": {
       "column": "9",
-      "line": "135",
+      "line": "133",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "TI_COMPANY_ID",
@@ -80770,13 +80546,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@5080@macro@INVALID_CONNHANDLE",
+    "ID": "c:simpleBLEPeripheral.c@5052@macro@INVALID_CONNHANDLE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "INVALID_CONNHANDLE",
     "location": {
       "column": "9",
-      "line": "137",
+      "line": "135",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "INVALID_CONNHANDLE",
@@ -80784,13 +80560,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@5170@macro@B_ADDR_STR_LEN",
+    "ID": "c:simpleBLEPeripheral.c@5142@macro@B_ADDR_STR_LEN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "B_ADDR_STR_LEN",
     "location": {
       "column": "9",
-      "line": "140",
+      "line": "138",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "B_ADDR_STR_LEN",
@@ -80804,7 +80580,7 @@
     "display": "simpleBLEPeripheral_TaskID",
     "location": {
       "column": "14",
-      "line": "161",
+      "line": "159",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleBLEPeripheral_TaskID",
@@ -80818,7 +80594,7 @@
     "display": "gapProfileState",
     "location": {
       "column": "25",
-      "line": "163",
+      "line": "161",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "gapProfileState",
@@ -80832,7 +80608,7 @@
     "display": "scanRspData",
     "location": {
       "column": "14",
-      "line": "166",
+      "line": "164",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "scanRspData",
@@ -80846,7 +80622,7 @@
     "display": "advertData",
     "location": {
       "column": "14",
-      "line": "207",
+      "line": "205",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "advertData",
@@ -80860,7 +80636,7 @@
     "display": "attDeviceName",
     "location": {
       "column": "14",
-      "line": "226",
+      "line": "224",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "attDeviceName",
@@ -80874,7 +80650,7 @@
     "display": "void simpleBLEPeripheral_ProcessOSALMsg(osal_event_hdr_t *)",
     "location": {
       "column": "13",
-      "line": "231",
+      "line": "229",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleBLEPeripheral_ProcessOSALMsg",
@@ -80888,7 +80664,7 @@
     "display": "void simpleBLEPeripheral_ProcessGATTMsg(gattMsgEvent_t *)",
     "location": {
       "column": "13",
-      "line": "232",
+      "line": "230",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleBLEPeripheral_ProcessGATTMsg",
@@ -80902,7 +80678,7 @@
     "display": "void peripheralStateNotificationCB(gaprole_States_t)",
     "location": {
       "column": "13",
-      "line": "233",
+      "line": "231",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "peripheralStateNotificationCB",
@@ -80916,7 +80692,7 @@
     "display": "void performPeriodicTask(void)",
     "location": {
       "column": "13",
-      "line": "234",
+      "line": "232",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "performPeriodicTask",
@@ -80930,7 +80706,7 @@
     "display": "void simpleProfileChangeCB(uint8)",
     "location": {
       "column": "13",
-      "line": "235",
+      "line": "233",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleProfileChangeCB",
@@ -80944,7 +80720,7 @@
     "display": "char * bdAddr2Str(uint8 *)",
     "location": {
       "column": "14",
-      "line": "242",
+      "line": "240",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "bdAddr2Str",
@@ -80958,7 +80734,7 @@
     "display": "void t4_isr(void)",
     "location": {
       "column": "18",
-      "line": "261",
+      "line": "259",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "t4_isr",
@@ -80966,13 +80742,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@9044@F@t4_isr@valueToCopy",
+    "ID": "c:simpleBLEPeripheral.c@9016@F@t4_isr@valueToCopy",
     "What": "Variable",
     "defdec": "Def",
     "display": "valueToCopy",
     "location": {
       "column": "11",
-      "line": "263",
+      "line": "261",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "valueToCopy",
@@ -80980,13 +80756,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@9068@F@t4_isr@stat",
+    "ID": "c:simpleBLEPeripheral.c@9040@F@t4_isr@stat",
     "What": "Variable",
     "defdec": "Def",
     "display": "stat",
     "location": {
       "column": "11",
-      "line": "264",
+      "line": "262",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "stat",
@@ -81000,7 +80776,7 @@
     "display": "void t3_isr(void)",
     "location": {
       "column": "18",
-      "line": "285",
+      "line": "283",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "t3_isr",
@@ -81008,13 +80784,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@9642@F@t3_isr@valueToCopy",
+    "ID": "c:simpleBLEPeripheral.c@9614@F@t3_isr@valueToCopy",
     "What": "Variable",
     "defdec": "Def",
     "display": "valueToCopy",
     "location": {
       "column": "11",
-      "line": "287",
+      "line": "285",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "valueToCopy",
@@ -81022,13 +80798,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@9666@F@t3_isr@stat",
+    "ID": "c:simpleBLEPeripheral.c@9638@F@t3_isr@stat",
     "What": "Variable",
     "defdec": "Def",
     "display": "stat",
     "location": {
       "column": "11",
-      "line": "288",
+      "line": "286",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "stat",
@@ -81042,7 +80818,7 @@
     "display": "void setUpInterrupts(void)",
     "location": {
       "column": "13",
-      "line": "309",
+      "line": "307",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "setUpInterrupts",
@@ -81050,13 +80826,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@12346@macro@PWM_PERIOD",
+    "ID": "c:simpleBLEPeripheral.c@12259@macro@PWM_PERIOD",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PWM_PERIOD",
     "location": {
       "column": "9",
-      "line": "367",
+      "line": "363",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "PWM_PERIOD",
@@ -81064,13 +80840,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@12391@macro@T1CTL_CLKDIV1",
+    "ID": "c:simpleBLEPeripheral.c@12343@macro@T1CTL_CLKDIV1",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "T1CTL_CLKDIV1",
     "location": {
       "column": "9",
-      "line": "368",
+      "line": "364",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "T1CTL_CLKDIV1",
@@ -81078,13 +80854,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@12464@macro@T1CTL_CLKDIV8",
+    "ID": "c:simpleBLEPeripheral.c@12416@macro@T1CTL_CLKDIV8",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "T1CTL_CLKDIV8",
     "location": {
       "column": "9",
-      "line": "369",
+      "line": "365",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "T1CTL_CLKDIV8",
@@ -81092,13 +80868,41 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@12537@macro@T1CTL_MODE_OFF",
+    "ID": "c:simpleBLEPeripheral.c@12489@macro@T34CTL_CLKDIV1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "T34CTL_CLKDIV1",
+    "location": {
+      "column": "9",
+      "line": "366",
+      "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
+    },
+    "name": "T34CTL_CLKDIV1",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:simpleBLEPeripheral.c@12563@macro@T34CTL_CLKDIV2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "T34CTL_CLKDIV2",
+    "location": {
+      "column": "9",
+      "line": "367",
+      "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
+    },
+    "name": "T34CTL_CLKDIV2",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:simpleBLEPeripheral.c@12637@macro@T1CTL_MODE_OFF",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "T1CTL_MODE_OFF",
     "location": {
       "column": "9",
-      "line": "370",
+      "line": "368",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "T1CTL_MODE_OFF",
@@ -81106,13 +80910,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@12589@macro@T1CTL_MODE_FR",
+    "ID": "c:simpleBLEPeripheral.c@12689@macro@T1CTL_MODE_FR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "T1CTL_MODE_FR",
     "location": {
       "column": "9",
-      "line": "371",
+      "line": "369",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "T1CTL_MODE_FR",
@@ -81120,44 +80924,100 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@12650@macro@T1CTL_MODE_MOD",
+    "ID": "c:simpleBLEPeripheral.c@12750@macro@T34CTL_MODE_FR",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "T1CTL_MODE_MOD",
+    "display": "T34CTL_MODE_FR",
+    "location": {
+      "column": "9",
+      "line": "370",
+      "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
+    },
+    "name": "T34CTL_MODE_FR",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:simpleBLEPeripheral.c@12817@macro@T34CTL_MODE_DOWN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "T34CTL_MODE_DOWN",
+    "location": {
+      "column": "9",
+      "line": "371",
+      "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
+    },
+    "name": "T34CTL_MODE_DOWN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:simpleBLEPeripheral.c@12878@macro@TxCTL_MODE_MOD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "TxCTL_MODE_MOD",
     "location": {
       "column": "9",
       "line": "372",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
-    "name": "T1CTL_MODE_MOD",
+    "name": "TxCTL_MODE_MOD",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@12705@macro@T1CCTLn_CMP_LE_ALIGN",
+    "ID": "c:simpleBLEPeripheral.c@12933@macro@TxCCTLn_CMP_LE_ALIGN",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "T1CCTLn_CMP_LE_ALIGN",
+    "display": "TxCCTLn_CMP_LE_ALIGN",
     "location": {
       "column": "9",
       "line": "373",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
-    "name": "T1CCTLn_CMP_LE_ALIGN",
+    "name": "TxCCTLn_CMP_LE_ALIGN",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@12834@macro@T1CCTLn_MODE_CMP",
+    "ID": "c:simpleBLEPeripheral.c@13062@macro@TxCCTLn_MODE_CMP",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "T1CCTLn_MODE_CMP",
+    "display": "TxCCTLn_MODE_CMP",
     "location": {
       "column": "9",
       "line": "374",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
-    "name": "T1CCTLn_MODE_CMP",
+    "name": "TxCCTLn_MODE_CMP",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:simpleBLEPeripheral.c@13160@macro@T34CTL_START_0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "T34CTL_START_0",
+    "location": {
+      "column": "9",
+      "line": "375",
+      "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
+    },
+    "name": "T34CTL_START_0",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:simpleBLEPeripheral.c@13217@macro@T34CTL_START_1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "T34CTL_START_1",
+    "location": {
+      "column": "9",
+      "line": "376",
+      "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
+    },
+    "name": "T34CTL_START_1",
     "origin": "project_file",
     "scope": null
   },
@@ -81168,7 +81028,7 @@
     "display": "void pwmInit(void)",
     "location": {
       "column": "13",
-      "line": "375",
+      "line": "377",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "pwmInit",
@@ -81182,7 +81042,7 @@
     "display": "void pwmStart(void)",
     "location": {
       "column": "13",
-      "line": "421",
+      "line": "455",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "pwmStart",
@@ -81196,7 +81056,7 @@
     "display": "void pwmStop(void)",
     "location": {
       "column": "13",
-      "line": "426",
+      "line": "462",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "pwmStop",
@@ -81210,7 +81070,7 @@
     "display": "i",
     "location": {
       "column": "6",
-      "line": "431",
+      "line": "469",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "i",
@@ -81224,7 +81084,7 @@
     "display": "void pwmUpdate(void)",
     "location": {
       "column": "13",
-      "line": "432",
+      "line": "470",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "pwmUpdate",
@@ -81238,7 +81098,7 @@
     "display": "simpleBLEPeripheral_PeripheralCBs",
     "location": {
       "column": "22",
-      "line": "449",
+      "line": "488",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleBLEPeripheral_PeripheralCBs",
@@ -81252,7 +81112,7 @@
     "display": "simpleBLEPeripheral_BondMgrCBs",
     "location": {
       "column": "21",
-      "line": "456",
+      "line": "495",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleBLEPeripheral_BondMgrCBs",
@@ -81266,7 +81126,7 @@
     "display": "simpleBLEPeripheral_SimpleProfileCBs",
     "location": {
       "column": "27",
-      "line": "463",
+      "line": "502",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleBLEPeripheral_SimpleProfileCBs",
@@ -81280,7 +81140,7 @@
     "display": "void SimpleBLEPeripheral_Init(uint8)",
     "location": {
       "column": "6",
-      "line": "485",
+      "line": "524",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "SimpleBLEPeripheral_Init",
@@ -81288,13 +81148,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@17454@F@SimpleBLEPeripheral_Init@initial_advertising_enable",
+    "ID": "c:simpleBLEPeripheral.c@19512@F@SimpleBLEPeripheral_Init@initial_advertising_enable",
     "What": "Variable",
     "defdec": "Def",
     "display": "initial_advertising_enable",
     "location": {
       "column": "13",
-      "line": "503",
+      "line": "542",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "initial_advertising_enable",
@@ -81302,13 +81162,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@17723@F@SimpleBLEPeripheral_Init@gapRole_AdvertOffTime",
+    "ID": "c:simpleBLEPeripheral.c@19781@F@SimpleBLEPeripheral_Init@gapRole_AdvertOffTime",
     "What": "Variable",
     "defdec": "Def",
     "display": "gapRole_AdvertOffTime",
     "location": {
       "column": "12",
-      "line": "509",
+      "line": "548",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "gapRole_AdvertOffTime",
@@ -81316,13 +81176,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@17771@F@SimpleBLEPeripheral_Init@enable_update_request",
+    "ID": "c:simpleBLEPeripheral.c@19829@F@SimpleBLEPeripheral_Init@enable_update_request",
     "What": "Variable",
     "defdec": "Def",
     "display": "enable_update_request",
     "location": {
       "column": "11",
-      "line": "511",
+      "line": "550",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "enable_update_request",
@@ -81330,13 +81190,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@17837@F@SimpleBLEPeripheral_Init@desired_min_interval",
+    "ID": "c:simpleBLEPeripheral.c@19895@F@SimpleBLEPeripheral_Init@desired_min_interval",
     "What": "Variable",
     "defdec": "Def",
     "display": "desired_min_interval",
     "location": {
       "column": "12",
-      "line": "512",
+      "line": "551",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "desired_min_interval",
@@ -81344,13 +81204,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@17907@F@SimpleBLEPeripheral_Init@desired_max_interval",
+    "ID": "c:simpleBLEPeripheral.c@19965@F@SimpleBLEPeripheral_Init@desired_max_interval",
     "What": "Variable",
     "defdec": "Def",
     "display": "desired_max_interval",
     "location": {
       "column": "12",
-      "line": "513",
+      "line": "552",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "desired_max_interval",
@@ -81358,13 +81218,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@17977@F@SimpleBLEPeripheral_Init@desired_slave_latency",
+    "ID": "c:simpleBLEPeripheral.c@20035@F@SimpleBLEPeripheral_Init@desired_slave_latency",
     "What": "Variable",
     "defdec": "Def",
     "display": "desired_slave_latency",
     "location": {
       "column": "12",
-      "line": "514",
+      "line": "553",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "desired_slave_latency",
@@ -81372,13 +81232,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@18044@F@SimpleBLEPeripheral_Init@desired_conn_timeout",
+    "ID": "c:simpleBLEPeripheral.c@20102@F@SimpleBLEPeripheral_Init@desired_conn_timeout",
     "What": "Variable",
     "defdec": "Def",
     "display": "desired_conn_timeout",
     "location": {
       "column": "12",
-      "line": "515",
+      "line": "554",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "desired_conn_timeout",
@@ -81386,13 +81246,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@19163@F@SimpleBLEPeripheral_Init@advInt",
+    "ID": "c:simpleBLEPeripheral.c@21221@F@SimpleBLEPeripheral_Init@advInt",
     "What": "Variable",
     "defdec": "Def",
     "display": "advInt",
     "location": {
       "column": "12",
-      "line": "536",
+      "line": "575",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "advInt",
@@ -81400,13 +81260,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@19505@F@SimpleBLEPeripheral_Init@passkey",
+    "ID": "c:simpleBLEPeripheral.c@21563@F@SimpleBLEPeripheral_Init@passkey",
     "What": "Variable",
     "defdec": "Def",
     "display": "passkey",
     "location": {
       "column": "12",
-      "line": "546",
+      "line": "585",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "passkey",
@@ -81414,13 +81274,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@19550@F@SimpleBLEPeripheral_Init@pairMode",
+    "ID": "c:simpleBLEPeripheral.c@21608@F@SimpleBLEPeripheral_Init@pairMode",
     "What": "Variable",
     "defdec": "Def",
     "display": "pairMode",
     "location": {
       "column": "11",
-      "line": "547",
+      "line": "586",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "pairMode",
@@ -81428,13 +81288,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@19607@F@SimpleBLEPeripheral_Init@mitm",
+    "ID": "c:simpleBLEPeripheral.c@21665@F@SimpleBLEPeripheral_Init@mitm",
     "What": "Variable",
     "defdec": "Def",
     "display": "mitm",
     "location": {
       "column": "11",
-      "line": "548",
+      "line": "587",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "mitm",
@@ -81442,13 +81302,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@19631@F@SimpleBLEPeripheral_Init@ioCap",
+    "ID": "c:simpleBLEPeripheral.c@21689@F@SimpleBLEPeripheral_Init@ioCap",
     "What": "Variable",
     "defdec": "Def",
     "display": "ioCap",
     "location": {
       "column": "11",
-      "line": "549",
+      "line": "588",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "ioCap",
@@ -81456,13 +81316,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@19679@F@SimpleBLEPeripheral_Init@bonding",
+    "ID": "c:simpleBLEPeripheral.c@21737@F@SimpleBLEPeripheral_Init@bonding",
     "What": "Variable",
     "defdec": "Def",
     "display": "bonding",
     "location": {
       "column": "11",
-      "line": "550",
+      "line": "589",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "bonding",
@@ -81470,13 +81330,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@20607@F@SimpleBLEPeripheral_Init@charValue1",
+    "ID": "c:simpleBLEPeripheral.c@22665@F@SimpleBLEPeripheral_Init@charValue1",
     "What": "Variable",
     "defdec": "Def",
     "display": "charValue1",
     "location": {
       "column": "11",
-      "line": "569",
+      "line": "608",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "charValue1",
@@ -81484,13 +81344,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@20634@F@SimpleBLEPeripheral_Init@charValue2",
+    "ID": "c:simpleBLEPeripheral.c@22692@F@SimpleBLEPeripheral_Init@charValue2",
     "What": "Variable",
     "defdec": "Def",
     "display": "charValue2",
     "location": {
       "column": "11",
-      "line": "570",
+      "line": "609",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "charValue2",
@@ -81498,13 +81358,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@20661@F@SimpleBLEPeripheral_Init@charValue3",
+    "ID": "c:simpleBLEPeripheral.c@22719@F@SimpleBLEPeripheral_Init@charValue3",
     "What": "Variable",
     "defdec": "Def",
     "display": "charValue3",
     "location": {
       "column": "11",
-      "line": "571",
+      "line": "610",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "charValue3",
@@ -81512,13 +81372,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@20688@F@SimpleBLEPeripheral_Init@charValue4",
+    "ID": "c:simpleBLEPeripheral.c@22746@F@SimpleBLEPeripheral_Init@charValue4",
     "What": "Variable",
     "defdec": "Def",
     "display": "charValue4",
     "location": {
       "column": "11",
-      "line": "572",
+      "line": "611",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "charValue4",
@@ -81532,7 +81392,7 @@
     "display": "uint16 SimpleBLEPeripheral_ProcessEvent(uint8, uint16)",
     "location": {
       "column": "8",
-      "line": "656",
+      "line": "695",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "SimpleBLEPeripheral_ProcessEvent",
@@ -81540,13 +81400,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@24013@F@SimpleBLEPeripheral_ProcessEvent@pMsg",
+    "ID": "c:simpleBLEPeripheral.c@26071@F@SimpleBLEPeripheral_ProcessEvent@pMsg",
     "What": "Variable",
     "defdec": "Def",
     "display": "pMsg",
     "location": {
       "column": "12",
-      "line": "663",
+      "line": "702",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "pMsg",
@@ -81560,7 +81420,7 @@
     "display": "void simpleBLEPeripheral_ProcessOSALMsg(osal_event_hdr_t *)",
     "location": {
       "column": "13",
-      "line": "720",
+      "line": "759",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleBLEPeripheral_ProcessOSALMsg",
@@ -81574,7 +81434,7 @@
     "display": "void simpleBLEPeripheral_ProcessGATTMsg(gattMsgEvent_t *)",
     "location": {
       "column": "13",
-      "line": "814",
+      "line": "853",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleBLEPeripheral_ProcessGATTMsg",
@@ -81588,7 +81448,7 @@
     "display": "void peripheralStateNotificationCB(gaprole_States_t)",
     "location": {
       "column": "13",
-      "line": "828",
+      "line": "867",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "peripheralStateNotificationCB",
@@ -81596,13 +81456,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@28764@F@peripheralStateNotificationCB@ownAddress",
+    "ID": "c:simpleBLEPeripheral.c@30822@F@peripheralStateNotificationCB@ownAddress",
     "What": "Variable",
     "defdec": "Def",
     "display": "ownAddress",
     "location": {
       "column": "15",
-      "line": "839",
+      "line": "878",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "ownAddress",
@@ -81610,13 +81470,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@28803@F@peripheralStateNotificationCB@systemId",
+    "ID": "c:simpleBLEPeripheral.c@30861@F@peripheralStateNotificationCB@systemId",
     "What": "Variable",
     "defdec": "Def",
     "display": "systemId",
     "location": {
       "column": "15",
-      "line": "840",
+      "line": "879",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "systemId",
@@ -81630,7 +81490,7 @@
     "display": "void performPeriodicTask(void)",
     "location": {
       "column": "13",
-      "line": "1005",
+      "line": "1044",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "performPeriodicTask",
@@ -81638,13 +81498,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@34310@F@performPeriodicTask@valueToCopy",
+    "ID": "c:simpleBLEPeripheral.c@36368@F@performPeriodicTask@valueToCopy",
     "What": "Variable",
     "defdec": "Def",
     "display": "valueToCopy",
     "location": {
       "column": "9",
-      "line": "1007",
+      "line": "1046",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "valueToCopy",
@@ -81652,13 +81512,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@34332@F@performPeriodicTask@stat",
+    "ID": "c:simpleBLEPeripheral.c@36390@F@performPeriodicTask@stat",
     "What": "Variable",
     "defdec": "Def",
     "display": "stat",
     "location": {
       "column": "9",
-      "line": "1008",
+      "line": "1047",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "stat",
@@ -81672,7 +81532,7 @@
     "display": "void simpleProfileChangeCB(uint8)",
     "location": {
       "column": "13",
-      "line": "1034",
+      "line": "1073",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "simpleProfileChangeCB",
@@ -81680,13 +81540,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@35244@F@simpleProfileChangeCB@newValue",
+    "ID": "c:simpleBLEPeripheral.c@37302@F@simpleProfileChangeCB@newValue",
     "What": "Variable",
     "defdec": "Def",
     "display": "newValue",
     "location": {
       "column": "9",
-      "line": "1036",
+      "line": "1075",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "newValue",
@@ -81700,7 +81560,7 @@
     "display": "char * bdAddr2Str(uint8 *)",
     "location": {
       "column": "7",
-      "line": "1073",
+      "line": "1112",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "bdAddr2Str",
@@ -81708,13 +81568,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@36297@F@bdAddr2Str@i",
+    "ID": "c:simpleBLEPeripheral.c@38355@F@bdAddr2Str@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "1075",
+      "line": "1114",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "i",
@@ -81722,13 +81582,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@36315@F@bdAddr2Str@hex",
+    "ID": "c:simpleBLEPeripheral.c@38373@F@bdAddr2Str@hex",
     "What": "Variable",
     "defdec": "Def",
     "display": "hex",
     "location": {
       "column": "15",
-      "line": "1076",
+      "line": "1115",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "hex",
@@ -81736,13 +81596,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@36358@F@bdAddr2Str@str",
+    "ID": "c:simpleBLEPeripheral.c@38416@F@bdAddr2Str@str",
     "What": "Variable",
     "defdec": "Def",
     "display": "str",
     "location": {
       "column": "15",
-      "line": "1077",
+      "line": "1116",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "str",
@@ -81750,13 +81610,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleBLEPeripheral.c@36394@F@bdAddr2Str@pStr",
+    "ID": "c:simpleBLEPeripheral.c@38452@F@bdAddr2Str@pStr",
     "What": "Variable",
     "defdec": "Def",
     "display": "pStr",
     "location": {
       "column": "16",
-      "line": "1078",
+      "line": "1117",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\SimpleBLEPeripheral\\Source\\simpleBLEPeripheral.c"
     },
     "name": "pStr",
@@ -87532,90 +87392,6 @@
     "scope": null
   },
   {
-    "ID": "c:stdarg.h@222@macro@_STDARG_H_",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STDARG_H_",
-    "location": {
-      "column": "9",
-      "line": "10",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdarg.h"
-    },
-    "name": "_STDARG_H_",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdarg.h@T@va_list",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "void *[1]",
-    "location": {
-      "column": "15",
-      "line": "19",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdarg.h"
-    },
-    "name": "va_list",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__va_start",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void __va_start(void **)",
-    "location": {
-      "column": "18",
-      "line": "21",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdarg.h"
-    },
-    "name": "__va_start",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdarg.h@398@macro@va_start",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "va_start",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdarg.h"
-    },
-    "name": "va_start",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdarg.h@442@macro@va_end",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "va_end",
-    "location": {
-      "column": "9",
-      "line": "24",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdarg.h"
-    },
-    "name": "va_end",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdarg.h@1143@macro@va_arg",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "va_arg",
-    "location": {
-      "column": "15",
-      "line": "42",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\8051\\inc\\clib\\stdarg.h"
-    },
-    "name": "va_arg",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:simpleGATTprofile.h@2534@macro@SIMPLEGATTPROFILE_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -87742,20 +87518,6 @@
     "scope": null
   },
   {
-    "ID": "c:simpleGATTprofile.h@3368@macro@SIMPLEPROFILE_CHAR2_UUID",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SIMPLEPROFILE_CHAR2_UUID",
-    "location": {
-      "column": "9",
-      "line": "75",
-      "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\Profiles\\SimpleProfile\\simpleGATTprofile.h"
-    },
-    "name": "SIMPLEPROFILE_CHAR2_UUID",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:simpleGATTprofile.h@3411@macro@SIMPLEPROFILE_CHAR1_UUID",
     "What": "MacroDef",
     "defdec": "Def",
@@ -87770,13 +87532,13 @@
     "scope": null
   },
   {
-    "ID": "c:simpleGATTprofile.h@3463@macro@SIMPLEPROFILE_CHAR2_UUID",
+    "ID": "c:simpleGATTprofile.h@3368@macro@SIMPLEPROFILE_CHAR2_UUID",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SIMPLEPROFILE_CHAR2_UUID",
     "location": {
       "column": "9",
-      "line": "76",
+      "line": "75",
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\Profiles\\SimpleProfile\\simpleGATTprofile.h"
     },
     "name": "SIMPLEPROFILE_CHAR2_UUID",
@@ -87794,6 +87556,20 @@
       "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\Profiles\\SimpleProfile\\simpleGATTprofile.h"
     },
     "name": "SIMPLEPROFILE_CHAR3_UUID",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:simpleGATTprofile.h@3463@macro@SIMPLEPROFILE_CHAR2_UUID",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SIMPLEPROFILE_CHAR2_UUID",
+    "location": {
+      "column": "9",
+      "line": "76",
+      "path": "C:\\Texas Instruments\\BLE-CC254x-1.5.0.16\\Projects\\ble\\Profiles\\SimpleProfile\\simpleGATTprofile.h"
+    },
+    "name": "SIMPLEPROFILE_CHAR2_UUID",
     "origin": "user_include",
     "scope": null
   },

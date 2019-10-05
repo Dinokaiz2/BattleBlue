@@ -11,3 +11,26 @@ Write 00 to T1CTL.MODE to stop counter. Write anything else to start it
 Timer 1 compare pins: Ch0-4: P0_2, P0_3, P0_4, P0_5, P0_6
 	Alt 2 Ch0-4: P1_2, P1_1, P1_0, P0_7, P0 
 T1CCTLn (n can be 0-4): For each of the 0-4 channels of timer 1. Low 3 bits (T1CCTL.CMP) set "compare mode", or behaviour when count = 0 or = compare value. 
+
+What we got
+
+Min clock speed: 0.25MHz = 250000Hz
+After prescaler divider of 128: 1953.125
+
+Timer 1: 16-bit = 65535
+Timer 3/4: 8-bit = 255
+
+Slowest timer 1 cycle: 0.0298Hz = 1 cycle every 33.5 seconds
+Slowest timer 3/4 cycle: 7.659Hz = 1 cycle every 130ms
+
+Timer 3/4 with prescaler divider of 32: 30.63Hz = 1 cycle 	every 32.64ms
+
+Or
+
+No prescalers
+Clock speed: 2MHz (32MHz/16)
+Timer 1 cycle: 2MHz / 2^16 = 30.51757813 Hz
+	Modulo mode (40000?) on 2 => 50 Hz
+Timer 3/4 cycle: 2MHz / 2^8 = 7.8125 kHz
+
+need to pullup unused pins?
